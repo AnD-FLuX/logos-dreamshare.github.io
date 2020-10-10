@@ -1,0 +1,23 @@
+@mixin box-size ($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+@mixin br($rad) {
+    -webkit-border-radius: $rad;
+    -moz-border-radius: $rad;
+    -ms-border-radius: $rad;
+    border-radius: $rad;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+
+}

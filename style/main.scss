@@ -1,0 +1,620 @@
+@import 'base/base';
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/fonts';
+
+.title {
+    font-family: 'MontserratBold';
+    font-size: 26px;
+    line-height: 32px;
+    color: #444444;
+    text-align: center;
+    margin: 90px auto 35px;
+}
+
+.text {
+    font-family: 'Roboto';
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.active {
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+.button {
+    display: block;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    line-height: 40px;
+    width: 225px;
+    height: 40px;
+    font-weight: bold;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: auto;
+}
+
+.header {
+    @include box-size (1440px, 700px);
+    margin: 0 auto;
+    background-image: url(./img/header_bg.png);
+    padding: 46px 250px 0;
+    color: #FFFFFF;
+
+    &__logo {
+        display: flex;
+        font-family: 'MontserratBold';
+        font-size: 20px;
+        line-height: 24px;
+        justify-content: space-between;
+
+        a {
+            text-decoration: none;
+            color: #FFFFFF;
+            text-align: center;
+        }
+    }
+
+    &__menu {
+        font-family: 'Montserrat';
+        font-size: 14px;
+        line-height: 17px;
+        margin-right: 50px;
+    }
+
+    &__link {
+        display: inline-block;
+        height: 36px;
+        width: 90px;
+        text-align: center;
+        line-height: 36px;
+    }
+
+    &__cont {
+        @include box-size (470px, 250px);
+        @include flex-column;
+        align-items: center;
+        margin: 140px auto;
+
+    }
+
+    &__title {
+        font-family: 'MontserratBold';
+        font-size: 52px;
+        line-height: 63px;
+        text-align: center;
+    }
+
+    &__subtitle {
+        margin: 28px 0 33px;
+        font-family: 'Roboto';
+        font-size: 24px;
+        line-height: 24px;
+        text-align: center;
+    }
+
+    &__button {
+        background-color: $button-color;
+        color: #FFFFFF;
+    }
+
+    &__button:hover {
+        background-color: #FFFFFF;
+        color: $button-color;
+        border: 2px solid $button-color;
+        line-height: 38px;
+    }
+}
+
+.steps {
+    width: 940px;
+    margin: auto;
+
+    &__items {
+        @include box-size (940px, 400px);
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    &__item {
+        @include box-size (300px, 400px);
+        @include br(4px);
+        @include flex-column;
+        justify-content: flex-end;
+        padding: 25px;
+        color: white;
+
+    }
+
+    &__item--img-01 {
+        background-image: url(img/Step_01.png);
+    }
+
+    &__item--img-02 {
+        background-image: url(img/Step_02.png);
+    }
+
+    &__item--img-03 {
+        background-image: url(img/Step_03.png);
+    }
+
+    &__number {
+        @include box-size (70px, 20px);
+        border-radius: 20px;
+        background-color: $button-color;
+        color: #FFFFFF;
+        font-family: 'Montserrat';
+        font-size: 10px;
+        line-height: 20px;
+        text-align: center;
+        letter-spacing: 2px;
+        margin-bottom: 18px;
+    }
+
+    &__title {
+        font-family: 'MontserratBold';
+        font-size: 24px;
+        line-height: 26px;
+        margin-bottom: 18px;
+    }
+
+    &__text {
+        text-align: inherit;
+    }
+}
+
+.partner {
+    width: 940px;
+    margin: auto;
+
+    &__items {
+        width: 940px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        @include box-size (220px, 225px);
+        @include flex-column;
+        align-items: center;
+    }
+
+    &__photo {
+        @include box-size (120px, 120px);
+        background-size: cover;
+        margin-bottom: 17px;
+    }
+
+    &__name {
+        font-family: 'MontserratBold';
+        font-size: 14px;
+        line-height: 17px;
+        margin-bottom: 17px;
+    }
+
+    &__about {
+        text-align: center;
+    }
+
+    &__photo--img-01 {
+        background-image: url(img/partner_01.png);
+    }
+
+    &__photo--img-02 {
+        background-image: url(img/partner_02.png);
+    }
+
+    &__photo--img-03 {
+        background-image: url(img/partner_03.png);
+    }
+
+    &__photo--img-04 {
+        background-image: url(img/partner_04.png);
+    }
+
+    &__button {
+        background-color: #FFFFFF;
+        color: $button-color;
+        border: 2px solid $button-color;
+        line-height: 38px;
+        margin: 36px auto;
+        width: 180px;
+    }
+
+    &__button:hover {
+        background-color: $button-color;
+        color: #FFFFFF;
+        border: 2px solid #FFFFFF;
+        line-height: 38px;
+    }
+}
+
+.ideas {
+    width: 940px;
+    margin: auto;
+
+    &__content {
+        @include box-size (940px, 970px);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+    }
+
+    &__photo {
+        @include box-size (300px, 310px);
+        @include br(4px);
+        @include flex-center;
+        background-size: cover;
+    }
+
+    &__title {
+        color: white;
+        font-family: 'Montserratbold';
+        font-size: 22px;
+        line-height: 27px;
+        text-align: center;
+    }
+
+    &__photo--img-01 {
+        background-image: url(img/holiday_01.png);
+    }
+
+    &__photo--img-02 {
+        background-image: url(img/holiday_02.png);
+    }
+
+    &__photo--img-03 {
+        background-image: url(img/holiday_03.png);
+    }
+
+    &__photo--img-04 {
+        background-image: url(img/holiday_04.png);
+    }
+
+    &__photo--img-05 {
+        width: 620px;
+        background-image: url(img/holiday_05.png);
+    }
+
+    &__photo--img-06 {
+        width: 620px;
+        background-image: url(img/holiday_06.png);
+    }
+
+    &__photo--img-07 {
+        background-image: url(img/holiday_07.png);
+    }
+}
+
+.search-partner {
+    @include flex-column;
+    @include flex-center;
+    width: 940px;
+    margin: auto;
+
+    &__text {
+        font-family: 'Roboto';
+        font-size: 18px;
+        line-height: 14px;
+        color: #666666;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    &__menu {
+        display: flex;
+        width: 500px;
+        margin-top: 25px;
+    }
+
+    &__input {
+        @include box-size (300px, 40px);
+        @include br(3px);
+        background: #FFFFFF;
+        border: 1px solid #D4D4D4;
+        box-sizing: border-box;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.073313);
+        color: #666666;
+        padding: 10px;
+    }
+
+    &__button {
+        background-color: $button-color;
+        color: #FFFFFF;
+        width: 172px;
+    }
+
+    &__button:hover {
+        background-color: #FFFFFF;
+        color: $button-color;
+        border: 2px solid $button-color;
+        line-height: 38px;
+    }
+}
+
+.footer {
+    width: 1440px;
+    border-top: 2px solid $button-color;
+    display: flex;
+    justify-content: space-between;
+    padding: 36px 240px;
+    margin: 100px auto 0;
+
+    &__logo {
+        font-family: 'Montserrat';
+        font-size: 16px;
+        line-height: 20px;
+        color: $button-color;
+    }
+
+    &__company {
+        @include flex-column;
+        font-family: 'MontserratBold';
+        font-size: 14px;
+
+    }
+
+    &__company-item {
+        font-family: 'Roboto';
+        font-size: 14px;
+        line-height: 26px;
+        margin-top: 10px;
+        color: #999999;
+    }
+
+    &__partners {
+        font-family: 'MontserratBold';
+        font-size: 14px;
+        color: #444444;
+    }
+
+    &__design {
+        @include flex-column;
+        align-items: flex-end;
+        font-family: 'MontserratBold';
+        font-size: 10px;
+        line-height: 12px;
+        color: #CCCCCC;
+        letter-spacing: 1px;
+    }
+
+    &__design-logo {
+        @include box-size (110px, 24px);
+        background-image: url(img/design_logo.png);
+        margin-top: 7px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1457px) {
+    .header {
+        width: 768px;
+        padding: 46px 48px 0;
+        background-position: center;
+
+        &__menu {
+            margin: 0;
+        }
+    }
+
+    .title {
+        font-size: 22px;
+    }
+
+    .steps {
+        width: 748px;
+
+        &__items {
+            width: 748px;
+        }
+
+        &__item {
+            width: 236px;
+        }
+    }
+
+    .partner {
+        width: 492px;
+        margin: auto;
+
+        &__items {
+            @include box-size (492px, 464px);
+            flex-wrap: wrap;
+        }
+    }
+
+    .ideas {
+        width: 748px;
+
+        &__content {
+            width: 748px;
+        }
+
+        &__photo {
+            width: 236px;
+            background-position: center;
+        }
+
+        &__photo--img-05,
+        &__photo--img-06 {
+            width: 492px;
+        }
+
+        &__photo--img-07 {
+            background-position: left;
+        }
+    }
+
+    .search-partner {
+        width: 748px;
+    }
+
+    .footer {
+        padding: 38px 39px 20px;
+        width: 768px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+
+    .header {
+        @include box-size (320px, 540px);
+        background-image: url(./img/header_bg_mobile.png);
+        background-position: center;
+        padding: 20px 0 0;
+
+        &__logo {
+            margin: 0 auto;
+            display: flex;
+            width: 190px;
+            height: 157px;
+            flex-direction: column-reverse;
+        }
+
+        &__menu {
+            display: flex;
+            flex-direction: row;
+            width: 190px;
+        }
+
+        &__cont {
+            @include box-size (280px, 184px);
+            margin: 26px auto;
+        }
+
+        &__subtitle {
+            margin: 6px 0 15px;
+            font-size: 18px;
+        }
+
+        &__title {
+            font-size: 30px;
+            line-height: 37px;
+        }
+
+        &__button {
+            width: 280px;
+        }
+    }
+
+    .title {
+        font-size: 22px;
+        margin: 35px auto 15px;
+    }
+
+    .steps {
+        width: 300px;
+        margin: auto;
+
+        &__items {
+            @include box-size (300px, 740px);
+            flex-wrap: wrap;
+
+        }
+
+        &__item {
+            @include box-size (300px, 240px);
+            padding: 20px;
+            background-position: bottom;
+        }
+    }
+
+    .partner {
+        @include flex-column;
+        width: 300px;
+        margin: auto;
+        justify-content: center;
+
+        &__items {
+            @include box-size (236px, 887px);
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: space-between;
+            margin: 0 32px;
+        }
+
+        &__item {
+            width: 236px;
+
+        }
+
+        &__photo, &__name {
+            margin-bottom: 12px;
+        }
+
+        &__button {
+            margin: 26px auto 0;
+            width: 280px;
+        }
+    }
+
+    .ideas {
+        width: 300px;
+
+        &__content {
+            @include box-size (300px, 900px);
+        }
+
+        &__photo {
+            @include box-size (300px, 120px);
+            background-position: center;
+        }
+
+        &__photo--img-07 {
+            background-position: top;
+        }
+    }
+
+    .search-partner {
+        width: 300px;
+
+        &__menu {
+            @include box-size (280px, 90px);
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        &__text {
+            margin-top: 0;
+        }
+
+        &__button {
+            width: 280px;
+        }
+    }
+
+    .footer {
+        @include flex-column;
+        width: 320px;
+        align-items: center;
+        padding: 20px 0;
+        margin: 40px auto 0;
+
+        &__company,
+        &__partners {
+            margin: 13px auto 0;
+            align-items: center;
+        }
+
+        &__company-item {
+            width: 250px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            p {
+                margin-right: 10px;
+            }
+        }
+
+        &__design {
+            @include flex-center;
+            margin-top: 13px;
+        }
+    }
+}
